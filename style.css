@@ -94,13 +94,15 @@ body {
 /* Max Container*/
 
 .MaxContainer {
+  /* border: solid #fff; */
   color: #000;
   overflow-x: hidden;
 }
 
 /* Navigation Bar*/
 
-.nav {
+.nav,
+.TVnav {
   position: fixed;
   background-color: #222;
   top: 0;
@@ -111,7 +113,8 @@ body {
   z-index: 3;
 }
 
-.nav .container {
+.nav .container,
+.TVnav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,16 +122,18 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.nav ul {
+.nav ul,
+.TVnav ul {
   display: flex;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   list-style-type: none;
   align-items: center;
   justify-content: center;
 }
 
-.nav a {
+.nav a,
+.TVnav a {
   color: white;
   text-decoration: none;
   padding: 7px 15px;
@@ -137,34 +142,40 @@ body {
   letter-spacing: 1;
 }
 
-.nav h1 {
+.nav h1,
+.TVnav h1 {
   transition: all 1s ease-in-out;
 }
 
-.nav .nav.active {
+.nav.active,
+.TVnav {
   background-color: rgb(31, 27, 27);
   box-shadow: 0 2px 10px rgba(0, 0, 0 0.3);
 }
 
-.nav.active .container {
+.nav.active .container,
+.TVnav .container {
   padding: 5px 0;
 }
 
 .nav a.current,
-.nav a:hover {
+.nav a:hover,
+.TVnav a.current,
+.TVnav a:hover {
   color: #c0392b;
   font-weight: bold;
 }
 
 #header-img {
-  height: 80px;
+  height: 4rem;
   padding-left: 20px;
   padding-right: 20px;
   transition: all 1s ease-in-out;
 }
 
-.nav.active #header-img {
-  height: 60px;
+.nav.active #header-img,
+.TVnav #header-img {
+  height: 3rem;
   margin: auto;
 }
 
@@ -173,16 +184,19 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.title.active {
+.title.active,
+.TVnav .title {
   margin: 10x 0 10px 0;
 }
 
-.nav.active .navTitle {
-  height: 20px;
+.nav.active .navTitle,
+.TVnav .navTitle {
+  height: 2px;
 }
 
-.nav.active navNetwork {
-  height: 15px;
+.nav.active .navNetwork,
+.TVnav .NavNetwork {
+  height: 1.5rem;
 }
 
 .LogoTitle {
@@ -191,14 +205,15 @@ body {
 
 .NavNetwork {
   color: #555;
-  line-height: 30px;
+  line-height: 1.5rem;
   letter-spacing: 0.8px;
 }
 
-.NavNetwork.active {
+.NavNetwork.active,
+.TVnav .NavNetwork {
   color: #555;
-  line-height: 30px;
-  letter-spacing: 0.8px;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 /* Learn button */
@@ -285,20 +300,22 @@ body {
 /* Leo Intro*/
 
 .LeoFinanceNetwork {
-  height: 100vh;
+  /* border: solid #fff; */
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
   z-index: -2;
 }
 
 #LeoLogo {
+  /* border: solid #fff; */
   margin: 150px 0 50px 0;
-  height: 30%;
+  height: 15rem;
 }
 
 .LeoFinanceNetwork h1 {
@@ -712,8 +729,8 @@ body {
 
 .currentWeekContainer {
   /* border: 1px solid rgb(255, 255, 255); */
-  margin: 150px auto 200px auto;
-  height: 80vh;
+  margin: 6rem auto 150px auto;
+  height: 85vh;
   width: 80vw;
   position: relative;
 }
@@ -726,13 +743,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
 }
 
 .tvShows {
   display: flex;
   width: 100%;
   z-index: 3;
+  padding-top: 2rem;
 }
 
 .panel {
@@ -760,6 +778,8 @@ body {
 .panel.activeShow .showDescription {
   width: auto;
   opacity: 1;
+  font-size: 1rem;
+  letter-spacing: 1;
   height: 5vh;
   transform: translateY(1120%);
   transition: opacity 0.3s ease-in 0.4s;
@@ -770,11 +790,11 @@ body {
   position: absolute;
   bottom: 0;
   height: 20vh;
-  width: 30vw;
+  width: 20vw;
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
-  transform: translateX(160%);
-  font-size: 3vh;
+  transform: translateX(260%);
+  font-size: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -783,6 +803,86 @@ body {
   background: #0f3854;
   background: radial-gradient(ellipse at center, #0a2e38 30%, #000000 70%);
   text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+  cursor: default;
+}
+
+.panel.activeShow .accessShow#accessCryptomaniacs {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 20vw;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  transform: translateX(240%);
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #540f0f;
+  background: radial-gradient(ellipse at center, #380a0a 30%, #000000 70%);
+  text-shadow: 0 0 20px rgb(230, 10, 10), 0 0 20px rgba(230, 10, 10, 0);
+  cursor: default;
+}
+
+.panel.activeShow .accessShow#accessOpenshow {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 20vw;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  transform: translateX(210%);
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #0f1154;
+  background: radial-gradient(ellipse at center, #0a0c38 30%, #000000 70%);
+  text-shadow: 0 0 20px rgb(10, 36, 230), 0 0 20px rgba(10, 21, 230, 0);
+  cursor: default;
+}
+
+.panel.activeShow .accessShow#accessCryptoholics {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 20vw;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  transform: translateX(-125%);
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #0f1154;
+  background: radial-gradient(ellipse at center, #0a0c38 30%, #000000 70%);
+  text-shadow: 0 0 20px rgb(10, 36, 230), 0 0 20px rgba(10, 21, 230, 0);
+  cursor: default;
+}
+
+.panel.activeShow .accessShow#accessOpenSlot {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 20vw;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  transform: translateX(-140%);
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #0f1154;
+  background: radial-gradient(ellipse at center, #0a0c38 30%, #000000 70%);
+  text-shadow: 0 0 20px rgb(10, 36, 230), 0 0 20px rgba(10, 21, 230, 0);
   cursor: default;
 }
 
@@ -796,17 +896,19 @@ body {
   color: #fff;
   cursor: pointer;
   text-decoration: none;
-  margin: 0 1vw 0 1vw;
+  margin: 0 0.7vw 0 0.7vw;
   opacity: 1;
   /* border: solid #fff; */
 }
 
-.countdownToAMA {
+.countdownToAMA,
+.countdownToCryptomaniacs,
+.countdownToOpenshow {
   font-size: 2vh;
 }
 
 .panel h3 {
-  font-size: 24px;
+  font-size: 1rem;
   position: absolute;
   bottom: -50px;
   left: 50%;
@@ -842,6 +944,8 @@ body {
   transform: translateX(-50%);
 }
 
+/* Show History */
+
 .catchUp {
   /* border: solid #fff; */
   font-size: 2vh;
@@ -850,7 +954,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2vh;
   margin: 0 2vw 0 2vw;
 }
 
@@ -905,7 +1008,13 @@ body {
   --iframe-gap: 0.25rem;
 }
 
+.catchUpContainer {
+  /* border: solid #fff; */
+  margin-top: 0;
+}
+
 .showContainer {
+  /* border: solid #fff; */
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -921,7 +1030,8 @@ body {
   transition: transform 250ms ease-in-out;
 }
 
-.slider > iframe {
+.slider > iframe,
+.iframe {
   flex: 0 0 calc(100% / var(--items-per-screen));
   max-width: calc(100% / var(--items-per-screen));
   aspect-ratio: 16 / 9;
@@ -1014,3 +1124,23 @@ body {
     --items-per-screen: 2;
   }
 }
+
+.iframe:hover {
+  transform: scale(0.98);
+}
+
+.episodeDescriptionBox {
+  /* border: solid #fff; */
+  color: transparent;
+  height: 4rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.leoTVMedia {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
