@@ -35,6 +35,7 @@ const openLearn = function () {
 
 const openTV = function () {
   window.open("leoTV.html");
+  return false;
 };
 
 const openBridge = function () {
@@ -50,7 +51,7 @@ const openCub = function () {
 };
 
 const openPolycub = function () {
-  window.open("https://wleo.io");
+  window.open("https://polycub.com");
 };
 
 // Scroll and show
@@ -183,6 +184,65 @@ var xAMA = setInterval(function () {
   }
 }, 1000);
 
+/* Countdown Cryptomiancs */
+
+var deadlineCryptomaniacs = new Date(
+  Date.UTC(2022, 8, 23, 15, 0, 0, 0)
+).getTime();
+var xCryptomaniacs = setInterval(function () {
+  var now = new Date().getTime();
+  var t = deadlineCryptomaniacs - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById("countdownToCryptomaniacs").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (t < 0) {
+    clearInterval(xCryptomaniacs);
+    document.getElementById("countdownToCryptomaniacs").innerHTML =
+      "Show is Live right now!";
+  }
+}, 1000);
+
+/* Countdown Openshow */
+
+var deadlineOpenshow = new Date(Date.UTC(2022, 9, 23, 15, 0, 0, 0)).getTime();
+var xCryptomaniacs = setInterval(function () {
+  var now = new Date().getTime();
+  var t = deadlineOpenshow - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById("countdownToOpenshow").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (t < 0) {
+    clearInterval(xOpenshow);
+    document.getElementById("countdownToOpenshow").innerHTML =
+      "Show is Live right now!";
+  }
+}, 1000);
+
+/* Countdown OpenSlot */
+
+var deadlineOpenSlot = new Date(Date.UTC(2022, 11, 23, 15, 0, 0, 0)).getTime();
+var xOpenSlot = setInterval(function () {
+  var now = new Date().getTime();
+  var t = deadlineOpenSlot - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById("countdownToOpenSlot").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (t < 0) {
+    clearInterval(xCryptoholics);
+    document.getElementById("countdownToOpenSlot").innerHTML =
+      "Show is Live right now!";
+  }
+}, 1000);
+
 /* Catch up */
 
 document.addEventListener("click", (e) => {
@@ -285,3 +345,4 @@ function throttle(cb, delay = 1000) {
     setTimeout(timeoutFunc, delay);
   };
 }
+
