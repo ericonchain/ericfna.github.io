@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <body>
     <div class="maxContainer">
-      <nav class="nav">
+      <nav class="TVnav">
         <div class="container">
           <div class="LogoTitle">
             <img id="header-img" src="LeoLogo.png" alt="Leo Finance Logo" />
@@ -41,11 +41,23 @@
           </ul>
         </div>
       </nav>
-
+      <!-- 
+*
+THIS WEEK ON LEO TV
+*
+ -->
       <div class="currentWeekContainer">
         <div class="agenda">Live Shows this week</div>
         <div class="tvShows">
-          <div class="panel activeShow" style="background-image: url('AMA.jpg')">
+          <!-- 
+*
+LEO FINANCE AMA
+*
+ -->
+          <div
+            class="panel activeShow"
+            style="background-image: url('AMA.jpg')"
+          >
             <h3>Tuesday</h3>
             <p class="showDescription">
               Khal, Cat, and Neal talk about the Leo Ecosystem, respond to any
@@ -82,13 +94,56 @@
               <div class="countdownToAMA" id="countdownToAMA"></div>
             </div>
           </div>
-          <div
-            class="panel"
-            style="background-image: url('cryptomaniacs.png')"
-          >
+          <!-- 
+*
+THE CRYPTOMANIACS
+*
+ -->
+          <div class="panel" style="background-image: url('cryptomaniacs.png')">
             <h3>Tuesday</h3>
-            <p></p>
+            <p class="showDescription">
+              Jon and Taskmaster host a different guest every week in one of the
+              most entertaining and educational shows in the whole crypto space.
+            </p>
+            <div class="accessShow" id="accessCryptomaniacs">
+              Watch The Cryptomaniacs live:
+              <div class="linksCryptomaniacs">
+                <a
+                  href="https://discord.com/channels/596095961047236622/596095961600753746"
+                  class="fa-brands fa-discord iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://twitter.com/financeLeo/"
+                  class="fa-brands fa-twitter iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.facebook.com/groups/430724151867174/"
+                  class="fa-brands fa-facebook iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://youtu.be/qwgQ4SPr4DM"
+                  class="fa-brands fa-youtube iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+              </div>
+              <div
+                class="countdownToCryptomaniacs"
+                id="countdownToCryptomaniacs"
+              ></div>
+            </div>
           </div>
+          <!-- 
+*
+OPEN SHOW
+*
+ -->
           <div
             class="panel"
             style="
@@ -96,12 +151,93 @@
             "
           >
             <h3>Thursday</h3>
-            <p></p>
+            <p class="showDescription">
+              Start the week listening to Khal and Lea talk about the markets,
+              worthy news, what to expect and what to watch for in this week to
+              come.
+            </p>
+            <div class="accessShow" id="accessOpenshow">
+              Tune in to Openshow on:
+              <div class="linksAMA">
+                <a
+                  href="https://discord.com/channels/596095961047236622/596095961600753746"
+                  class="fa-brands fa-discord iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://twitter.com/financeLeo/"
+                  class="fa-brands fa-twitter iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.facebook.com/groups/430724151867174/"
+                  class="fa-brands fa-facebook iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://youtu.be/qwgQ4SPr4DM"
+                  class="fa-brands fa-youtube iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="countdownToOpenshow" id="countdownToOpenshow"></div>
+            </div>
+
+            <!-- 
+*
+Cryptholics
+*  
+             -->
           </div>
           <div class="panel" style="background-image: url('cryptholics.webp')">
             <h3>Friday</h3>
-            <p></p>
+            <p class="showDescription">
+              Crack open a cold one and join Nifty Phil and Eric to talk
+              everything geek & nerd in a chill and laid back Friday night show.
+            </p>
+            <div class="accessShow" id="accessCryptoholics">
+              Chill with Cryptoholics on:
+              <div class="linksAMA">
+                <a
+                  href="https://discord.com/channels/596095961047236622/596095961600753746"
+                  class="fa-brands fa-discord iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://twitter.com/financeLeo/"
+                  class="fa-brands fa-twitter iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.facebook.com/groups/430724151867174/"
+                  class="fa-brands fa-facebook iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://youtu.be/qwgQ4SPr4DM"
+                  class="fa-brands fa-youtube iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+              </div>
+              <div
+                class="countdownToCryptoholics"
+                id="countdownToCryptoholics"
+              ></div>
+            </div>
           </div>
+          <!-- 
+*
+OPEN SLOT
+*
+             -->
           <div
             class="panel"
             style="
@@ -109,7 +245,40 @@
             "
           >
             <h3>Saturday</h3>
-            <p></p>
+            <p class="showDescription">
+              Join homesteader and crypto rookie Gubba and long-term investor
+              Khal on the journey of trading crypto with a long term mindset.
+            </p>
+            <div class="accessShow" id="accessOpenSlot">
+              Learn with Gubba & Khal on:
+              <div class="linksAMA">
+                <a
+                  href="https://discord.com/channels/596095961047236622/596095961600753746"
+                  class="fa-brands fa-discord iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://twitter.com/financeLeo/"
+                  class="fa-brands fa-twitter iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.facebook.com/groups/430724151867174/"
+                  class="fa-brands fa-facebook iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://youtu.be/qwgQ4SPr4DM"
+                  class="fa-brands fa-youtube iconLinkAMA"
+                  type="submit"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="countdownToOpenSlot" id="countdownToOpenSlot"></div>
+            </div>
           </div>
         </div>
         <div class="showsHistory">
@@ -118,7 +287,9 @@
             <span></span>
             <span></span>
           </div>
-          <div class="catchUp">Play Catch up</div>
+          <div class="catchUp">
+            <a href="#catchUpScroll">Play Catch Up</a>
+          </div>
           <div class="scrollShowsRight">
             <span></span>
             <span></span>
@@ -126,183 +297,248 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="showHeader">
-          <h3 class="showTitle">Leo Finance AMA</h3>
-          <div class="progress-bar"></div>
-        </div>
-        <div class="showContainer">
-          <button class="handle left-handle">
-            <div class="showText">&#8249;</div>
-          </button>
-          <div class="slider">
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/dkljdhho"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/nvouskqj"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/fvvwdiew"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/yxummgdz"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/pvfxfzzm"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/hzdehexf"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/ypqrbkxf"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/ebiafrvt"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/cjshldec"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/oiokucsk"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/drmcjetk"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=khaleelkazi/suigalot"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+      <!--
+*  
+PREVIOUS SHOWS
+*
+ -->
+      <div class="catchUpContainer" id="catchUpScroll">
+        <!--
+*
+AMA PREVIOUS EPISODES
+*
+ -->
+        <div class="row">
+          <div class="showHeader">
+            <h3 class="showTitle">Leo Finance AMA</h3>
+            <div class="progress-bar"></div>
           </div>
-          <button class="handle right-handle">
-            <div class="showText">&#8250;</div>
-          </button>
+          <div class="showContainer">
+            <button class="handle left-handle">
+              <div class="showText">&#8249;</div>
+            </button>
+            <div class="slider">
+              <iframe
+                class="iframe"
+                src="https://3speak.tv/embed?v=khaleelkazi/dkljdhho"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                title="this is a title"
+              ></iframe>
+
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/nvouskqj"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/fvvwdiew"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/yxummgdz"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/pvfxfzzm"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/hzdehexf"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/ypqrbkxf"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/ebiafrvt"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/cjshldec"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/oiokucsk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/drmcjetk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=khaleelkazi/suigalot"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <button class="handle right-handle">
+              <div class="showText">&#8250;</div>
+            </button>
+          </div>
         </div>
+
+        <div class="episodeDescriptionBox">Description box</div>
+
+        <div class="row">
+          <div class="showHeader">
+            <h3 class="showTitle">The Cryptomaniacs</h3>
+            <div class="progress-bar"></div>
+          </div>
+          <div class="showContainer">
+            <button class="handle left-handle">
+              <div class="showText">&#8249;</div>
+            </button>
+            <div class="slider">
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/mjhakydq"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/zgmjsnin"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/djhczjyt"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/jnysrunq"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/atzcagmk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/kjtttvku"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/oogdtyfl"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/crkxnnvs"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/snwmiyrf"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/bfjjrvzn"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/rqmjamrm"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://3speak.tv/embed?v=jongolson/bondvqui"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <button class="handle right-handle">
+              <div class="showText">&#8250;</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="episodeDescriptionBox">Description box</div>
       </div>
-      <div class="row">
-        <div class="showHeader">
-          <h3 class="showTitle">The Cryptomaniacs</h3>
-          <div class="progress-bar"></div>
-        </div>
-        <div class="showContainer">
-          <button class="handle left-handle">
-            <div class="showText">&#8249;</div>
-          </button>
-          <div class="slider">
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/mjhakydq"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/zgmjsnin"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/djhczjyt"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/jnysrunq"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/atzcagmk"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/kjtttvku"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/oogdtyfl"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/crkxnnvs"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/snwmiyrf"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/bfjjrvzn"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/rqmjamrm"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              src="https://3speak.tv/embed?v=jongolson/bondvqui"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <button class="handle right-handle">
-            <div class="showText">&#8250;</div>
-          </button>
+
+
+        <div class="leoTVMedia">
+          <a
+            href="https://discord.com/channels/596095961047236622/596095961600753746"
+            class="fa-brands fa-discord socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
+          <a
+            href="https://twitter.com/financeLeo/"
+            class="fa-brands fa-twitter socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
+          <a
+            href="https://www.facebook.com/groups/430724151867174/"
+            class="fa-brands fa-facebook socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
+          <a
+            href="https://t.me/cubdefi"
+            class="fa-brands fa-telegram socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
+          <a
+            href="https://leofinance.io/@leofinance"
+            class="fa-brands fa-hive socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
+          <a
+            href="https://leofinance.io/@leofinance"
+            class="fa-brands fa-youtube socialMedia"
+            type="submit"
+            target="_blank"
+          ></a>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+
