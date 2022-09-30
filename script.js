@@ -264,25 +264,30 @@ document.querySelectorAll(".progress-bar").forEach(calculateProgressBar);
 
 function calculateProgressBar(progressBar) {
   progressBar.innerHTML = "";
-  const slider = progressBar.closest(".row").querySelector(".slider");
-  const itemCount = slider.children.length;
+  const sliderCatcher = progressBar
+    .closest(".row")
+    .querySelector(".sliderCatcher");
+  const itemCount = sliderCatcher.children.length;
   const itemsPerScreen = parseInt(
-    getComputedStyle(slider).getPropertyValue("--items-per-screen")
+    getComputedStyle(sliderCatcher).getPropertyValue("--items-per-screen")
   );
-  let sliderIndex = parseInt(
-    getComputedStyle(slider).getPropertyValue("--slider-index")
+  let sliderCatcherIndex = parseInt(
+    getComputedStyle(sliderCatcher).getPropertyValue("--sliderCatcher-index")
   );
   const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
 
-  if (sliderIndex >= progressBarItemCount) {
-    slider.style.setProperty("--slider-index", progressBarItemCount - 1);
-    sliderIndex = progressBarItemCount - 1;
+  if (sliderCatcherIndex >= progressBarItemCount) {
+    sliderCatcher.style.setProperty(
+      "--sliderCatcher-index",
+      progressBarItemCount - 1
+    );
+    sliderCatcherIndex = progressBarItemCount - 1;
   }
 
   for (let i = 0; i < progressBarItemCount; i++) {
     const barItem = document.createElement("div");
     barItem.classList.add("progress-item");
-    if (i === sliderIndex) {
+    if (i === sliderCatcherIndex) {
       barItem.classList.add("active");
     }
     progressBar.append(barItem);
@@ -291,32 +296,43 @@ function calculateProgressBar(progressBar) {
 
 function onHandleClick(handle) {
   const progressBar = handle.closest(".row").querySelector(".progress-bar");
-  const slider = handle.closest(".showContainer").querySelector(".slider");
-  const sliderIndex = parseInt(
-    getComputedStyle(slider).getPropertyValue("--slider-index")
+  const sliderCatcher = handle
+    .closest(".showContainer")
+    .querySelector(".sliderCatcher");
+  const sliderCatcherIndex = parseInt(
+    getComputedStyle(sliderCatcher).getPropertyValue("--sliderCatcher-index")
   );
   const progressBarItemCount = progressBar.children.length;
   if (handle.classList.contains("left-handle")) {
-    if (sliderIndex - 1 < 0) {
-      slider.style.setProperty("--slider-index", progressBarItemCount - 1);
-      progressBar.children[sliderIndex].classList.remove("active");
+    if (sliderCatcherIndex - 1 < 0) {
+      sliderCatcher.style.setProperty(
+        "--sliderCatcher-index",
+        progressBarItemCount - 1
+      );
+      progressBar.children[sliderCatcherIndex].classList.remove("active");
       progressBar.children[progressBarItemCount - 1].classList.add("active");
     } else {
-      slider.style.setProperty("--slider-index", sliderIndex - 1);
-      progressBar.children[sliderIndex].classList.remove("active");
-      progressBar.children[sliderIndex - 1].classList.add("active");
+      sliderCatcher.style.setProperty(
+        "--sliderCatcher-index",
+        sliderCatcherIndex - 1
+      );
+      progressBar.children[sliderCatcherIndex].classList.remove("active");
+      progressBar.children[sliderCatcherIndex - 1].classList.add("active");
     }
   }
 
   if (handle.classList.contains("right-handle")) {
-    if (sliderIndex + 1 >= progressBarItemCount) {
-      slider.style.setProperty("--slider-index", 0);
-      progressBar.children[sliderIndex].classList.remove("active");
+    if (sliderCatcherIndex + 1 >= progressBarItemCount) {
+      sliderCatcher.style.setProperty("--sliderCatcher-index", 0);
+      progressBar.children[sliderCatcherIndex].classList.remove("active");
       progressBar.children[0].classList.add("active");
     } else {
-      slider.style.setProperty("--slider-index", sliderIndex + 1);
-      progressBar.children[sliderIndex].classList.remove("active");
-      progressBar.children[sliderIndex + 1].classList.add("active");
+      sliderCatcher.style.setProperty(
+        "--sliderCatcher-index",
+        sliderCatcherIndex + 1
+      );
+      progressBar.children[sliderCatcherIndex].classList.remove("active");
+      progressBar.children[sliderCatcherIndex + 1].classList.add("active");
     }
   }
 }
@@ -345,4 +361,151 @@ function throttle(cb, delay = 1000) {
     setTimeout(timeoutFunc, delay);
   };
 }
+
+// Academy
+
+document.addEventListener("click", (e) => {
+  let academyHandle;
+  if (e.target.matches(".academyHandle")) {
+    academyHandle = e.target;
+  } else {
+    academyHandle = e.target.closest(".academyHandle");
+  }
+  if (academyHandle != null) academyOnHandleClick(academyHandle);
+});
+
+const academyThrottleProgressBar = academyThrottle(() => {
+  document
+    .querySelectorAll(".academyProgress-bar")
+    .forEach(calculateAcademyProgressBar);
+}, 250);
+window.addEventListener("resize", academyThrottleProgressBar);
+
+document
+  .querySelectorAll(".academyProgress-bar")
+  .forEach(calculateAcademyProgressBar);
+
+function calculateAcademyProgressBar(academyProgressBar) {
+  academyProgressBar.innerHTML = "";
+  const academySlider = academyProgressBar
+    .closest(".academyRow")
+    .querySelector(".academySlider");
+  const academyItemCount = academySlider.children.length;
+  const academyItemsPerScreen = parseInt(
+    getComputedStyle(academySlider).getPropertyValue("--items-per-screen")
+  );
+  let academySliderIndex = parseInt(
+    getComputedStyle(academySlider).getPropertyValue("--academySlider-index")
+  );
+  const academyProgressBarItemCount = Math.ceil(
+    academyItemCount / academyItemsPerScreen
+  );
+
+  if (academySliderIndex >= academyProgressBarItemCount) {
+    academySlider.style.setProperty(
+      "--academySlider-index",
+      academyProgressBarItemCount - 1
+    );
+    academySliderIndex = academyProgressBarItemCount - 1;
+  }
+
+  for (let i = 0; i < academyProgressBarItemCount; i++) {
+    const academyBarItem = document.createElement("div");
+    academyBarItem.classList.add("academyProgress-item");
+    if (i === academySliderIndex) {
+      academyBarItem.classList.add("academyActive");
+    }
+    academyProgressBar.append(academyBarItem);
+  }
+}
+
+function academyOnHandleClick(academyHandle) {
+  const academyProgressBar = academyHandle
+    .closest(".academyRow")
+    .querySelector(".academyProgress-bar");
+  const academySlider = academyHandle
+    .closest(".academyContainer")
+    .querySelector(".academySlider");
+  const academySliderIndex = parseInt(
+    getComputedStyle(academySlider).getPropertyValue("--academySlider-index")
+  );
+  const academyProgressBarItemCount = academyProgressBar.children.length;
+  if (academyHandle.classList.contains("academyLeft-handle")) {
+    if (academySliderIndex - 1 < 0) {
+      academySlider.style.setProperty(
+        "--academySlider-index",
+        academyProgressBarItemCount - 1
+      );
+      academyProgressBar.children[academySliderIndex].classList.remove(
+        "academyActive"
+      );
+      academyProgressBar.children[
+        academyProgressBarItemCount - 1
+      ].classList.add("academyActive");
+    } else {
+      academySlider.style.setProperty(
+        "--academySlider-index",
+        academySliderIndex - 1
+      );
+      academyProgressBar.children[academySliderIndex].classList.remove(
+        "academyActive"
+      );
+      academyProgressBar.children[academySliderIndex - 1].classList.add(
+        "academyActive"
+      );
+    }
+  }
+
+  if (academyHandle.classList.contains("academyRight-handle")) {
+    if (academySliderIndex + 1 >= academyProgressBarItemCount) {
+      academySlider.style.setProperty("--academySlider-index", 0);
+      academyProgressBar.children[academySliderIndex].classList.remove(
+        "academyActive"
+      );
+      academyProgressBar.children[0].classList.add("academyActive");
+    } else {
+      academySlider.style.setProperty(
+        "--academySlider-index",
+        academySliderIndex + 1
+      );
+      academyProgressBar.children[academySliderIndex].classList.remove(
+        "academyActive"
+      );
+      academyProgressBar.children[academySliderIndex + 1].classList.add(
+        "academyActive"
+      );
+    }
+  }
+}
+
+function academyThrottle(academycb, delay = 1000) {
+  let academyShouldWait = false;
+  let academyWaitingArgs;
+  const academyTimeoutFunc = () => {
+    if (academyWaitingArgs == null) {
+      academyShouldWait = false;
+    } else {
+      academycb(...academyWaitingArgs);
+      academyWaitingArgs = null;
+      setTimeout(academyTimeoutFunc, delay);
+    }
+  };
+
+  return (...academyArgs) => {
+    if (academyShouldWait) {
+      academyWaitingArgs = academyArgs;
+      return;
+    }
+
+    academycb(...academyArgs);
+    academyShouldWait = true;
+    setTimeout(academyTimeoutFunc, delay);
+  };
+}
+
+// Buttons
+
+const opentest = function () {
+  window.open("https://leofinance.io");
+};
 
