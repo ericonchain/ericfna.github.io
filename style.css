@@ -110,7 +110,7 @@ body {
   right: 0;
   padding-right: 20px;
   transition: all 1s ease-in-out;
-  z-index: 3;
+  z-index: 99;
 }
 
 .nav .container,
@@ -689,35 +689,13 @@ body {
   opacity: 1;
 }
 
-/* LEARN */
-
-.learnContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 150px;
-}
-
-.learningSection {
-  color: #fff;
-  font-size: 16px;
-}
-
-.learnContainer .blogText,
-.learnContainer .cubText,
-.learnContainer .polycubText {
-  color: #fff;
-  transform: translateX(0);
-  font-size: 12px;
-}
-
 /* Carousel */
 
 :root {
   --movie-width: 15.5vw;
   --movie-height: 200px;
   --arrow-width: 50px;
-  --slider-py: 200px;
+  --sliderCatcher-py: 200px;
 }
 @media only screen and (max-width: 1000px) {
   :root {
@@ -1003,6 +981,8 @@ body {
   }
 }
 
+/* NETFLIX STYLE */
+
 :root {
   --handle-size: 3rem;
   --iframe-gap: 0.25rem;
@@ -1020,18 +1000,17 @@ body {
   overflow: hidden;
 }
 
-.slider {
+.sliderCatcher {
   --items-per-screen: 4;
-  --slider-index: 0;
+  --sliderCatcher-index: 0;
   display: flex;
   flex-grow: 1;
   margin: 0 var(--iframe-gap);
-  transform: translateX(calc(var(--slider-index) * -100%));
+  transform: translateX(calc(var(--sliderCatcher-index) * -100%));
   transition: transform 250ms ease-in-out;
 }
 
-.slider > iframe,
-.iframe {
+.sliderCatcher > iframe {
   flex: 0 0 calc(100% / var(--items-per-screen));
   max-width: calc(100% / var(--items-per-screen));
   aspect-ratio: 16 / 9;
@@ -1114,27 +1093,21 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .slider {
+  .sliderCatcher {
     --items-per-screen: 3;
   }
 }
 
 @media (max-width: 500px) {
-  .slider {
+  .sliderCatcher {
     --items-per-screen: 2;
   }
 }
 
-.iframe:hover {
+iframe:hover {
   transform: scale(0.98);
-}
-
-.episodeDescriptionBox {
-  /* border: solid #fff; */
-  color: transparent;
-  height: 4rem;
-  margin: 1rem;
-  padding: 1rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.9) inset;
+  transition: 0.5s;
 }
 
 .leoTVMedia {
@@ -1144,3 +1117,195 @@ body {
   transform: translateX(-50%);
 }
 
+/* LEO ACADEMY */
+
+.learnContainer {
+  /* border: solid #fff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  width: 95vw;
+  margin: 15vh auto 0 auto;
+}
+
+.learningSection {
+  /* border: solid rgb(61, 10, 230); */
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  margin-bottom: 5rem;
+}
+
+.tutorialsTitle {
+  font-size: 2rem;
+  margin: 1rem;
+  color: #fff;
+  /* border: solid #ffaf39; */
+}
+
+.leoTutorials {
+  text-shadow: 1px 1px 15px rgb(255, 44, 2);
+}
+
+.cubTutorials {
+  text-shadow: 1px 1px 15px #138cf5;
+}
+
+.polycubTutorials {
+  text-shadow: 1px 1px 15px #ffaf39;
+}
+
+/* Academy */
+
+:root {
+  --academyHandle-size: 3rem;
+  --academyButton-gap: 0.25rem;
+}
+
+.academyContainer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  /* border: solid #fff; */
+}
+
+.newContainer {
+  /* border: solid #f1592a; */
+  width: 95vw;
+  margin: 0 auto 5vh auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.writtenTitle {
+  align-content: center;
+  justify-content: center;
+  color: #fff;
+  align-self: center;
+}
+
+.academySlider {
+  --items-per-screen: 6;
+  --academySlider-index: 0;
+  display: flex;
+  flex-grow: 1;
+  margin: 0 var(--academyButton-gap);
+  transform: translateX(calc(var(--academySlider-index) * -100%));
+  transition: transform 250ms ease-in-out;
+}
+
+.academySlider > button {
+  flex: 0 0 calc(100% / var(--items-per-screen));
+  max-width: calc(100% / var(--items-per-screen));
+  aspect-ratio: 16 / 16;
+  padding: var(--academyButton-gap);
+  border-radius: 1rem;
+}
+
+.academyButton {
+  background-size: cover;
+}
+
+.academySlider > button:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.9) inset;
+  transition: 0.5s;
+}
+
+.academyHandle {
+  border: none;
+  border-radius: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 99;
+  margin: var(--academyButton-gap) 0;
+  width: var(--academyHandle-size);
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  line-height: 0;
+  transition: background-color 150ms ease-in-out;
+}
+
+.academyLeft-handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.academyRight-handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.academyHandle:hover,
+.academyHandle:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.academyText {
+  transition: transform 150ms ease-in-out;
+}
+
+.academyHandle:hover .academyText,
+.academyHandle:focus .academyText {
+  transform: scale(1.2);
+}
+
+.academyHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc(var(--academyButton-gap) * 2 + var(--academyHandle-size));
+  align-items: center;
+}
+
+.academyTitle {
+  font-size: 2rem;
+  margin: 1rem;
+  color: #fff;
+  /* border: solid #ffaf39; */
+}
+
+.academyProgress-bar {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.progress-item {
+  flex: 0 0 1.5rem;
+  min-width: 1.5rem;
+  height: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-item.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1000px) {
+  .academySlider {
+    --items-per-screen: 3;
+  }
+}
+
+@media (max-width: 500px) {
+  .academySlider {
+    --items-per-screen: 2;
+  }
+}
+
+#image1 {
+  background-image: url("thumbnail1.png");
+}
