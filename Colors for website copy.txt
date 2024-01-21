@@ -1,0 +1,7 @@
+Colors for Website
+
+
+Bridge: e7b139
+Leo: f0582a
+Cub: 138cf5
+Polycub: ffaf39

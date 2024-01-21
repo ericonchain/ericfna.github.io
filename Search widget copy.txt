@@ -1,0 +1,61 @@
+Search widget
+
+          <!-- <div class="search">
+            <input type="text" class="input" placeholder="Search..." />
+            <button class="btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button> -->
+
+/* Search Widget*/
+
+.search {
+  position: relative; /*So we can position things inside of it in absolute position.*/
+  height: 50px;
+}
+
+.search .input {
+  background-color: rgb(121, 52, 52);
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 40px; /* It will start short, as a small cube*/
+  width: 40px;
+  transition: width 0.3s ease; /*We want the width to have a transition that we will specify below*/
+}
+
+.btn {
+  background-color: rgb(190, 166, 166);
+  border: 0;
+  cursor: pointer; /*When we hover over we want a pointer cursor*/
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 15px;
+  right: 20px;
+  transition: transform 0.3 ease; /*We want a transition because we want the input to expand the width. The input gets wider and the button gets pushed over.*/
+}
+
+/* Getting rid of any outline*/
+
+.btn:focus,
+.input:focus {
+  /*When the button and the input are in focus state*/
+  outline: none;
+}
+
+.search.active .input {
+  /*If the search has an active class, we want the input to do the following:*/
+  width: 100px; /* When the search element has an active class, the width of the input will go from 50 px specified above, to 200px*/
+  margin-right: 20px;
+}
+
+.search.active .btn {
+  transform: translateX(
+    -40px
+  ); /* When the search class is active, we want the button to move to the righh which is why we use the X axis*/
+}
