@@ -29,9 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 var audio = document.getElementById("audioPlayer");
 
-// Pause the audio initially
-
-
 // Wait for 1 second and then play the audio
 setTimeout(function() {
     audio.play();
