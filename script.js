@@ -27,33 +27,12 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Website links
+var audio = document.getElementById("audioPlayer");
 
-const openLearn = function () {
-  window.open("learn.html");
-};
+// Pause the audio initially
 
-const openTV = function () {
-  window.open("leoTV.html");
-  return false;
-};
 
-const openBridge = function () {
-  window.open("https://wleo.io");
-};
-
-const openLeo = function () {
-  window.open("https://leofinance.io");
-};
-
-const openCub = function () {
-  window.open("https://cubdefi.com");
-};
-
-const openPolycub = function () {
-  window.open("https://polycub.com");
-};
-
-const openArticulos = function () {
-  window.open("index.html");
-};
+// Wait for 1 second and then play the audio
+setTimeout(function() {
+    audio.play();
+}, 0);
