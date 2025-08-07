@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- NH Hotel logo styling -->
+  <rect x="10" y="15" width="30" height="30" fill="white" stroke="#2c5aa0" stroke-width="2"/>
+  
+  <!-- NH letters -->
+  <text x="15" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5aa0">NH</text>
+  
+  <!-- Hotel text -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#333">
+    Gran Hotel
+  </text>
+  <text x="50" y="40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5aa0">
+    Provincial
+  </text>
+  
+  <!-- Decorative element -->
+  <circle cx="170" cy="30" r="8" fill="#f39c12"/>
+  <circle cx="170" cy="30" r="4" fill="white"/>
+</svg>

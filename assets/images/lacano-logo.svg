@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c5aa0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3d73;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#logoGradient)" stroke="#f39c12" stroke-width="3"/>
+  
+  <!-- Central symbol representing psychoanalysis -->
+  <g transform="translate(100,100)">
+    <!-- Stylized "L" for Lacanoamericana -->
+    <path d="M-40,-60 L-40,20 L-10,20 L-10,0 L-20,0 L-20,-60 Z" fill="white"/>
+    
+    <!-- Stylized "A" -->
+    <path d="M-5,-60 L15,-60 L35,20 L15,20 L10,-10 L0,-10 L-5,20 L-25,20 Z M2,-30 L8,-30 L5,-45 Z" fill="white"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="-60" cy="0" r="8" fill="#f39c12"/>
+    <circle cx="60" cy="0" r="8" fill="#f39c12"/>
+    <circle cx="0" cy="-75" r="6" fill="#f39c12"/>
+    <circle cx="0" cy="75" r="6" fill="#f39c12"/>
+  </g>
+  
+  <!-- Outer decorative ring -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+  <circle cx="100" cy="100" r="75" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+</svg>

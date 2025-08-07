@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envío de Trabajos - Lacanoamericana Mar del Plata 2024</title>
+    <meta name="description" content="Formulario para el envío de trabajos académicos a la Reunión Lacanoamericana de Psicoanálisis en Mar del Plata 2024">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/lacano-logo-texto.svg" alt="Lacanoamericana Mar del Plata 2024" class="logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                    <a href="../index.html#cronograma" class="nav-link">Cronograma</a>
+                    <a href="../index.html#nosotros" class="nav-link">Nosotros</a>
+                    <a href="../index.html#contacto" class="nav-link">Inscripción</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="work-submission-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Envío de Trabajos</h1>
+                    <p class="page-subtitle">Reunión Lacanoamericana de Psicoanálisis - Mar del Plata 2024</p>
+                </div>
+
+                <div class="submission-info">
+                    <div class="info-card urgent">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Información Importante</h3>
+                        <p>A fines de dinamizar los tiempos de acreditación, solicitamos que envíen el trabajo y su traducción lo antes posible.</p>
+                        <p><strong>Email de envío:</strong> <a href="mailto:trabajos@lalacanomardelplata.com">trabajos@lalacanomardelplata.com</a></p>
+                    </div>
+
+                    <div class="guidelines-grid">
+                        <div class="guideline-card">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Formato del Trabajo</h4>
+                            <ul>
+                                <li>Extensión máxima: 15 páginas</li>
+                                <li>Formato: Times New Roman, 12pt</li>
+                                <li>Interlineado: 1.5</li>
+                                <li>Formato: PDF preferentemente</li>
+                            </ul>
+                        </div>
+
+                        <div class="guideline-card">
+                            <i class="fas fa-language"></i>
+                            <h4>Idiomas</h4>
+                            <ul>
+                                <li>Español o Portugués</li>
+                                <li>Traducción en ambos idiomas (requerida)</li>
+                                <li>Resumen en inglés (opcional)</li>
+                            </ul>
+                        </div>
+
+                        <div class="guideline-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Tiempos de Presentación</h4>
+                            <ul>
+                                <li>30 minutos por trabajo</li>
+                                <li>Incluye presentación y debate</li>
+                                <li>Sorteo para determinar orden</li>
+                            </ul>
+                        </div>
+
+                        <div class="guideline-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Criterios de Selección</h4>
+                            <ul>
+                                <li>Relevancia teórica y clínica</li>
+                                <li>Calidad académica</li>
+                                <li>Originalidad del enfoque</li>
+                                <li>Representatividad institucional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submission-form-container">
+                    <h2>Formulario de Envío</h2>
+                    <form class="work-submission-form" id="work-submission-form">
+                        <div class="form-section">
+                            <h3>Datos del Autor</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="autor-nombre">Nombre completo *</label>
+                                    <input type="text" id="autor-nombre" name="autor-nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="autor-email">Email *</label>
+                                    <input type="email" id="autor-email" name="autor-email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="institucion">Institución de pertenencia *</label>
+                                    <input type="text" id="institucion" name="institucion" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pais">País *</label>
+                                    <input type="text" id="pais" name="pais" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono de contacto</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Datos del Trabajo</h3>
+                            <div class="form-group">
+                                <label for="titulo-trabajo">Título del trabajo *</label>
+                                <input type="text" id="titulo-trabajo" name="titulo-trabajo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="titulo-traducido">Título traducido (si aplica)</label>
+                                <input type="text" id="titulo-traducido" name="titulo-traducido">
+                                <small class="form-help">Si el trabajo está en español, proporcione el título en portugués y viceversa</small>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="idioma-original">Idioma original *</label>
+                                    <select id="idioma-original" name="idioma-original" required>
+                                        <option value="">Seleccione...</option>
+                                        <option value="español">Español</option>
+                                        <option value="portugues">Português</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="categoria">Categoría temática *</label>
+                                    <select id="categoria" name="categoria" required>
+                                        <option value="">Seleccione...</option>
+                                        <option value="clinica">Clínica Psicoanalítica</option>
+                                        <option value="teoria">Teoría Psicoanalítica</option>
+                                        <option value="formacion">Formación del Analista</option>
+                                        <option value="cultura">Psicoanálisis y Cultura</option>
+                                        <option value="transmision">Transmisión del Psicoanálisis</option>
+                                        <option value="sintoma">El Síntoma Contemporáneo</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="resumen">Resumen del trabajo (máximo 300 palabras) *</label>
+                                <textarea id="resumen" name="resumen" rows="6" maxlength="2000" required></textarea>
+                                <div class="character-count">
+                                    <span id="char-count">0</span>/2000 caracteres
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="palabras-clave">Palabras clave *</label>
+                                <input type="text" id="palabras-clave" name="palabras-clave" required>
+                                <small class="form-help">Separe las palabras clave con comas (3-5 palabras)</small>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Archivos</h3>
+                            <div class="form-group">
+                                <label for="archivo-trabajo">Trabajo completo *</label>
+                                <input type="file" id="archivo-trabajo" name="archivo-trabajo" accept=".pdf,.doc,.docx" required>
+                                <small class="form-help">Formatos aceptados: PDF, DOC, DOCX. Máximo 10MB</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="archivo-traduccion">Traducción del trabajo</label>
+                                <input type="file" id="archivo-traduccion" name="archivo-traduccion" accept=".pdf,.doc,.docx">
+                                <small class="form-help">Requerida para completar el proceso de acreditación</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="archivo-cv">CV abreviado (opcional)</label>
+                                <input type="file" id="archivo-cv" name="archivo-cv" accept=".pdf,.doc,.docx">
+                                <small class="form-help">Máximo 2 páginas</small>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Información Adicional</h3>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="primera-vez" name="primera-vez">
+                                <label for="primera-vez">Es mi primera participación en una Reunión Lacanoamericana</label>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="acepta-sorteo" name="acepta-sorteo" required>
+                                <label for="acepta-sorteo">Acepto que el orden de presentación sea determinado por sorteo *</label>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="acepta-terminos" name="acepta-terminos" required>
+                                <label for="acepta-terminos">Acepto los términos y condiciones de participación *</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comentarios">Comentarios adicionales</label>
+                                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Trabajo
+                            </button>
+                            <button type="reset" class="reset-button">
+                                <i class="fas fa-undo"></i>
+                                Limpiar Formulario
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email para trabajos</h4>
+                                <p><a href="mailto:trabajos@lalacanomardelplata.com">trabajos@lalacanomardelplata.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Comisión de Recepción</h4>
+                                <p>Coordinación: Ana Lía Gugliotta (CaP)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario de atención</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00 hrs</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-calendar"></i>
+                            <div>
+                                <h4>Fecha límite</h4>
+                                <p>15 de septiembre de 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/lacano-logo.svg" alt="Lacanoamericana Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Lacanoamericana Mar del Plata. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .work-submission-page {
+            padding: 3rem 0;
+            background: var(--bg-light);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .submission-info {
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-card.urgent {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: #856404;
+            margin-top: 0.5rem;
+        }
+
+        .info-card h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .info-card a {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .guideline-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .guideline-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .guideline-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .guideline-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .guideline-card li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .guideline-card li:last-child {
+            border-bottom: none;
+        }
+
+        .submission-form-container {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .submission-form-container h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .form-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--bg-light);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+        }
+
+        .form-help {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .character-count {
+            text-align: right;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 0.2rem;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .submit-button, .reset-button {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .submit-button {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .submit-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .reset-button {
+            background: var(--bg-gray);
+            color: var(--text-dark);
+            border: 2px solid var(--border-color);
+        }
+
+        .reset-button:hover {
+            background: var(--bg-light);
+            border-color: var(--primary-color);
+        }
+
+        .contact-info {
+            background: var(--bg-gray);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+        .contact-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .submission-form-container {
+                padding: 2rem 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .submit-button, .reset-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // Character counter for textarea
+        document.getElementById('resumen').addEventListener('input', function() {
+            const charCount = this.value.length;
+            document.getElementById('char-count').textContent = charCount;
+            
+            if (charCount > 1500) {
+                document.getElementById('char-count').style.color = '#e74c3c';
+            } else {
+                document.getElementById('char-count').style.color = '#7f8c8d';
+            }
+        });
+
+        // File validation
+        function validateFile(input, maxSize = 10 * 1024 * 1024) {
+            const file = input.files[0];
+            if (!file) return true;
+
+            if (file.size > maxSize) {
+                alert('El archivo es demasiado grande. Máximo 10MB permitido.');
+                input.value = '';
+                return false;
+            }
+
+            const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            if (!allowedTypes.includes(file.type)) {
+                alert('Tipo de archivo no permitido. Solo PDF, DOC y DOCX son aceptados.');
+                input.value = '';
+                return false;
+            }
+
+            return true;
+        }
+
+        // Add file validation to file inputs
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function() {
+                validateFile(this);
+            });
+        });
+
+        // Form submission
+        document.getElementById('work-submission-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#e74c3c';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (!isValid) {
+                alert('Por favor complete todos los campos obligatorios.');
+                return;
+            }
+
+            // Show loading message
+            const submitButton = this.querySelector('.submit-button');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitButton.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                alert('¡Trabajo enviado correctamente! Recibirá una confirmación por email en los próximos minutos.');
+                this.reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                
+                // Reset character counter
+                document.getElementById('char-count').textContent = '0';
+            }, 2000);
+        });
+    </script>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
